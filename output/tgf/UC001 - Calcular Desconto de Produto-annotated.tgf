@@ -1,0 +1,159 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
+41 41
+42 42
+43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+49 49
+50 50
+51 51
+52 52
+53 53
+54 54
+55 55
+56 56
+57 57
+58 58
+59 59
+60 60
+61 61
+62 62
+63 63
+64 64
+65 65
+66 66
+67 67
+68 68
+69 69
+70 70
+71 71
+72 72
+73 73
+74 74
+75 75
+76 76
+#
+1 36 conditions
+36 2 O sistema está disponível e existem produtos cadastrados
+2 37 steps
+37 3 Usuário do Sistema acessa a calculadora de descontos
+3 38 expected_results
+38 4 system apresenta página inicial com opção 'Calcular Desconto'
+4 39 steps
+39 5 Usuário do Sistema clica em 'Calcular Desconto'
+5 40 expected_results
+40 6 system redireciona para a listagem de produtos (/produtos)
+6 41 steps
+41 7 Usuário do Sistema visualiza tabela com produtos cadastrados: Código, Nome, Valor e Ações
+7 42 expected_results
+42 8 system exibe ícones de ação para cada produto: $ (calcular), ↺ (editar), ✗ (excluir)
+8 43 steps
+43 9 Usuário do Sistema clica no ícone '$' (calcular desconto) do produto desejado
+9 44 expected_results
+44 10 system redireciona para formulário de cálculo
+10 45 steps
+45 11 Usuário do Sistema visualiza dados do produto preenchidos automaticamente
+11 46 expected_results
+46 12 system apresenta seção 'Dados do Produto' com código, nome e valor preenchidos
+12 47 steps
+47 13 Usuário do Sistema visualiza formulário de informações complementares
+13 48 expected_results
+48 14 system apresenta campos: Tipo de Cliente (padrão 'A') e Quantidade (vazio)
+14 49 steps
+49 15 Usuário do Sistema seleciona tipo de cliente se desejar alterar
+15 50 expected_results
+50 16 system registra o tipo de cliente selecionado
+16 51 steps
+51 17 Usuário do Sistema informa a quantidade de produtos
+17 52 expected_results
+52 18 system registra a quantidade informada
+18 53 steps
+53 19 Usuário do Sistema clica no botão 'Calcular Desconto!'
+19 54 expected_results
+54 20 system processa o cálculo do desconto baseado no tipo de cliente e quantidade
+20 55 steps
+55 21 Usuário do Sistema é redirecionado para página de resultado
+21 56 expected_results
+56 22 system exibe mensagem 'Valor do desconto calculado com sucesso!'
+22 57 steps
+57 23 Usuário do Sistema visualiza resultado do cálculo com todos os detalhes
+23 58 expected_results
+58 24 system apresenta: tipo de cliente, quantidade, fator de desconto e valor final
+24 59 steps
+59 25 Usuário do Sistema visualiza dados originais do produto para conferência
+25 60 expected_results
+60 26 system exibe botão 'Realizar Novo Cálculo'
+26 61 conditions
+61 27 Usuário visualiza o desconto calculado com todos os detalhes e pode realizar novo cálculo
+14 62 steps
+62 15 Usuário do Sistema mantém seleção padrão do tipo de cliente A
+14 63 steps
+63 15 Usuário do Sistema altera para tipo de cliente B
+14 64 steps
+64 15 Usuário do Sistema altera para tipo de cliente C
+16 65 steps
+65 28 Usuário do Sistema informa a quantidade de produtos menor que 100 unidades
+28 66 expected_results
+66 29 system aplica fator de desconto para quantidade < 100: Cliente A (0,90), B (0,85), C (0,80)
+29 67 steps
+67 19 Usuário do Sistema clica no botão 'Calcular Desconto!'
+16 68 steps
+68 30 Usuário do Sistema informa a quantidade de produtos entre 100 e 999 unidades
+30 69 expected_results
+69 31 system aplica fator de desconto para 100 <= quantidade < 1000: Cliente A (0,95), B (0,90), C (0,85)
+31 70 steps
+70 19 Usuário do Sistema clica no botão 'Calcular Desconto!'
+16 71 steps
+71 32 Usuário do Sistema informa a quantidade de produtos igual ou maior que 1000 unidades
+32 72 expected_results
+72 33 system aplica fator de desconto para quantidade >= 1000: Cliente A (1,00), B (0,95), C (0,90)
+33 73 steps
+73 19 Usuário do Sistema clica no botão 'Calcular Desconto!'
+16 74 steps
+74 34 Usuário do Sistema informa a quantidade de produtos menor ou igual a zero
+34 75 expected_results
+75 35 system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)
+35 76 steps
+76 19 Usuário do Sistema clica no botão 'Calcular Desconto!'
