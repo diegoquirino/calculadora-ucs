@@ -170,6 +170,16 @@ node
   id 34
   label "34"
 ]
+node
+[
+  id 35
+  label "35"
+]
+node
+[
+  id 36
+  label "36"
+]
 edge
 [
   source 1
@@ -407,6 +417,18 @@ edge
 edge
 [
   source 34
+  target 35
+  label "[e] system registra a quantidade informada"
+]
+edge
+[
+  source 35
+  target 36
+  label "[s] Usuário do Sistema clica no botão 'Calcular Desconto!'"
+]
+edge
+[
+  source 36
   target 27
   label "[e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)"
 ]

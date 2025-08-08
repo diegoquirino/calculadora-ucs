@@ -32,6 +32,8 @@
 32 32
 33 33
 34 34
+35 35
+36 36
 #
 1 2 [c] O sistema está disponível e existem produtos cadastrados
 2 3 [s] Usuário do Sistema acessa a calculadora de descontos
@@ -72,4 +74,6 @@
 32 33 [e] system aplica fator de desconto para quantidade >= 1000: Cliente A (1,00), B (0,95), C (0,90)
 33 19 [s] Usuário do Sistema clica no botão 'Calcular Desconto!'
 16 34 [s] Usuário do Sistema informa a quantidade de produtos menor ou igual a zero
-34 27 [e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)
+34 35 [e] system registra a quantidade informada
+35 36 [s] Usuário do Sistema clica no botão 'Calcular Desconto!'
+36 27 [e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)
