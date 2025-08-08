@@ -170,11 +170,6 @@ node
   id 34
   label "34"
 ]
-node
-[
-  id 35
-  label "35"
-]
 edge
 [
   source 1
@@ -412,13 +407,7 @@ edge
 edge
 [
   source 34
-  target 35
+  target 27
   label "[e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)"
-]
-edge
-[
-  source 35
-  target 19
-  label "[s] Usuário do Sistema clica no botão 'Calcular Desconto!'"
 ]
 ]

@@ -67,7 +67,6 @@ usecase "UC001 - Calcular Desconto de Produto" {
     alternative 7 "Quantidade menor ou igual a zero" {
         step 1 usuario "informa a quantidade de produtos menor ou igual a zero"
         step 2 system "exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)"
-        step 3 usuario "clica no botão 'Calcular Desconto!'" bs 18
     }
     
     postCondition "Usuário visualiza o desconto calculado com todos os detalhes e pode realizar novo cálculo"
