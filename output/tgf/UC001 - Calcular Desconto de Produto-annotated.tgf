@@ -100,7 +100,7 @@
 12 47 steps
 47 13 Usuário do Sistema visualiza formulário de informações complementares
 13 48 expected_results
-48 14 system apresenta campos: Tipo de Cliente (padrão 'A') e Quantidade (vazio)
+48 14 system apresenta campos: Tipo de Cliente e Quantidade
 14 49 steps
 49 15 Usuário do Sistema seleciona tipo de cliente se desejar alterar
 15 50 expected_results

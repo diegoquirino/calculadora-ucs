@@ -46,7 +46,7 @@
 10 11 [s] Usuário do Sistema visualiza dados do produto preenchidos automaticamente
 11 12 [e] system apresenta seção 'Dados do Produto' com código, nome e valor preenchidos
 12 13 [s] Usuário do Sistema visualiza formulário de informações complementares
-13 14 [e] system apresenta campos: Tipo de Cliente (padrão 'A') e Quantidade (vazio)
+13 14 [e] system apresenta campos: Tipo de Cliente e Quantidade
 14 15 [s] Usuário do Sistema seleciona tipo de cliente se desejar alterar
 15 16 [e] system registra o tipo de cliente selecionado
 16 17 [s] Usuário do Sistema informa a quantidade de produtos

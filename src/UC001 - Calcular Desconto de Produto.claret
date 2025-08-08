@@ -19,7 +19,7 @@ usecase "UC001 - Calcular Desconto de Produto" {
         step 9 usuario "visualiza dados do produto preenchidos automaticamente"
         step 10 system "apresenta seção 'Dados do Produto' com código, nome e valor preenchidos"
         step 11 usuario "visualiza formulário de informações complementares"
-        step 12 system "apresenta campos: Tipo de Cliente (padrão 'A') e Quantidade (vazio)"
+        step 12 system "apresenta campos: Tipo de Cliente e Quantidade"
         step 13 usuario "seleciona tipo de cliente se desejar alterar" af[1,2,3]
         step 14 system "registra o tipo de cliente selecionado"
         step 15 usuario "informa a quantidade de produtos" af[4,5,6,7]

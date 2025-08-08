@@ -251,7 +251,7 @@ edge
 [
   source 13
   target 14
-  label "[e] system apresenta campos: Tipo de Cliente (padrão 'A') e Quantidade (vazio)"
+  label "[e] system apresenta campos: Tipo de Cliente e Quantidade"
 ]
 edge
 [
