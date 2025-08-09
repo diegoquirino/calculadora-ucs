@@ -122,9 +122,9 @@ Cada caso de uso possui um fluxo principal que representa o caminho de sucesso p
 ### Estrutura dos Arquivos
 ```
 calculadora-descontos/
-├── especificacao-claret.txt    # Especificação completa
-├── README.md                   # Este arquivo
-└── documentacao/              # Documentação adicional
+├── src         # Especificação completa
+├── README.md   # Este arquivo
+└── output/     # Casos de Teste Gerados (MBT)
 ```
 
 ### Interpretação da Especificação
