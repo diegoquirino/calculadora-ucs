@@ -1,0 +1,22 @@
+systemName "Calculadora de Descontos"
+
+usecase "UC006 - Acessar Ajuda do Sistema" {
+    version "1.0" type "Creation" user "Diego Quirino" date "08/08/2025"
+    
+    actor usuario "Usuário do Sistema"
+    
+    preCondition "O sistema está disponível"
+    
+    basic {
+        step 1 usuario "acessa o menu de ajuda (FAQ)"
+        step 2 system "apresenta o manual online do sistema" ef[1]
+        step 3 usuario "visualiza as informações de ajuda"
+        step 4 system "exibe descrição completa do funcionamento da calculadora"
+    }
+    
+    exception 1 "Manual não disponível" {
+        step 1 system "exibe mensagem de erro informando indisponibilidade temporária"
+    }
+    
+    postCondition "Usuário tem acesso às informações de ajuda do sistema"
+}

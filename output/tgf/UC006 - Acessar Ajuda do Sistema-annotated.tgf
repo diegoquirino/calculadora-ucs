@@ -1,0 +1,29 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+#
+1 8 conditions
+8 2 O sistema está disponível
+2 9 steps
+9 3 Usuário do Sistema acessa o menu de ajuda (FAQ)
+3 10 expected_results
+10 4 system apresenta o manual online do sistema
+4 11 steps
+11 5 Usuário do Sistema visualiza as informações de ajuda
+5 12 expected_results
+12 6 system exibe descrição completa do funcionamento da calculadora
+6 13 conditions
+13 7 Usuário tem acesso às informações de ajuda do sistema
+3 14 expected_results
+14 7 system exibe mensagem de erro informando indisponibilidade temporária

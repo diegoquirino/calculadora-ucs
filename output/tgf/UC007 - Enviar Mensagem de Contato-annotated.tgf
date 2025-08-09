@@ -1,0 +1,107 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+29 29
+30 30
+31 31
+32 32
+33 33
+34 34
+35 35
+36 36
+37 37
+38 38
+39 39
+40 40
+41 41
+42 42
+43 43
+44 44
+45 45
+46 46
+47 47
+48 48
+#
+1 20 conditions
+20 2 O sistema está disponível e usuário deseja entrar em contato
+2 21 steps
+21 3 Usuário do Sistema acessa o formulário de contato
+3 22 expected_results
+22 4 system apresenta formulário com campos: nome, e-mail, tipo de mensagem, faixa de idade e conteúdo
+4 23 steps
+23 5 Usuário do Sistema preenche o nome
+5 24 expected_results
+24 6 system apresenta o nome informado
+6 25 steps
+25 7 Usuário do Sistema preenche o e-mail
+7 26 expected_results
+26 8 system apresenta o e-mail informado
+8 27 steps
+27 9 Usuário do Sistema seleciona o tipo de mensagem
+9 28 expected_results
+28 10 system apresenta o tipo de mensagem selecionado
+10 29 steps
+29 11 Usuário do Sistema seleciona a faixa de idade
+11 30 expected_results
+30 12 system apresenta a faixa de idade selecionada
+12 31 steps
+31 13 Usuário do Sistema escreve o conteúdo da mensagem
+13 32 expected_results
+32 14 system apresenta o conteúdo da mensagem informado
+14 33 steps
+33 15 Usuário do Sistema submete o formulário
+15 34 expected_results
+34 16 system processa e envia a mensagem
+16 35 steps
+35 17 Usuário do Sistema visualiza mensagem de confirmação
+17 36 expected_results
+36 18 system exibe mensagem 'Mensagem de <tipo de mensagem> por usuário de idade <faixa de idade> foi enviada com sucesso'
+18 37 conditions
+37 19 Mensagem de contato foi enviada com sucesso para a administração
+8 38 steps
+38 9 Usuário do Sistema seleciona 'Dúvida' como tipo de mensagem
+8 39 steps
+39 9 Usuário do Sistema seleciona 'Sugestão' como tipo de mensagem
+8 40 steps
+40 9 Usuário do Sistema seleciona 'Reclamação' como tipo de mensagem
+10 41 steps
+41 11 Usuário do Sistema mantida faixa etária selecionada por padrão: 'Menor que 18 anos'
+10 42 steps
+42 11 Usuário do Sistema seleciona faixa etária 'Entre 18 e 29 anos'
+10 43 steps
+43 11 Usuário do Sistema seleciona faixa etária 'Entre 30 e 60 anos'
+10 44 steps
+44 11 Usuário do Sistema seleciona faixa etária 'Acima de 60 anos'
+15 45 expected_results
+45 4 system exibe mensagem de erro solicitando preenchimento do nome
+15 46 expected_results
+46 6 system exibe mensagem de erro solicitando e-mail válido
+15 47 expected_results
+47 8 system exibe mensagem de erro solicitando escolha pelo tipo de mensagem
+15 48 expected_results
+48 12 system exibe mensagem de erro solicitando preenchimento do conteúdo

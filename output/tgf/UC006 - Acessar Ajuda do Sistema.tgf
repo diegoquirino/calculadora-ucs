@@ -1,0 +1,15 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+#
+1 2 [c] O sistema está disponível
+2 3 [s] Usuário do Sistema acessa o menu de ajuda (FAQ)
+3 4 [e] system apresenta o manual online do sistema
+4 5 [s] Usuário do Sistema visualiza as informações de ajuda
+5 6 [e] system exibe descrição completa do funcionamento da calculadora
+6 7 [c] Usuário tem acesso às informações de ajuda do sistema
+3 7 [e] system exibe mensagem de erro informando indisponibilidade temporária

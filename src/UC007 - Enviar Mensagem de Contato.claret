@@ -1,0 +1,74 @@
+systemName "Calculadora de Descontos"
+
+usecase "UC007 - Enviar Mensagem de Contato" {
+    version "1.0" type "Creation" user "Diego Quirino" date "29/07/2025"
+    
+    actor usuario "Usuário do Sistema"
+    
+    preCondition "O sistema está disponível e usuário deseja entrar em contato"
+    
+    basic {
+        step 1 usuario "acessa o formulário de contato"
+        step 2 system "apresenta formulário com campos: nome, e-mail, tipo de mensagem, faixa de idade e conteúdo"
+        step 3 usuario "preenche o nome"
+        step 4 system "apresenta o nome informado"
+        step 5 usuario "preenche o e-mail"
+        step 6 system "apresenta o e-mail informado"
+        step 7 usuario "seleciona o tipo de mensagem" af[1,2,3]
+        step 8 system "apresenta o tipo de mensagem selecionado"
+        step 9 usuario "seleciona a faixa de idade" af[4,5,6,7]
+        step 10 system "apresenta a faixa de idade selecionada"
+        step 11 usuario "escreve o conteúdo da mensagem"
+        step 12 system "apresenta o conteúdo da mensagem informado"
+        step 13 usuario "submete o formulário"
+        step 14 system "processa e envia a mensagem" ef[1,2,3,4]
+        step 15 usuario "visualiza mensagem de confirmação"
+        step 16 system "exibe mensagem 'Mensagem de <tipo de mensagem> por usuário de idade <faixa de idade> foi enviada com sucesso'"
+    }
+    
+    alternative 1 "Tipo de mensagem: Dúvida" {
+        step 1 usuario "seleciona 'Dúvida' como tipo de mensagem" bs 8
+    }
+    
+    alternative 2 "Tipo de mensagem: Sugestão" {
+        step 1 usuario "seleciona 'Sugestão' como tipo de mensagem" bs 8
+    }
+    
+    alternative 3 "Tipo de mensagem: Reclamação" {
+        step 1 usuario "seleciona 'Reclamação' como tipo de mensagem" bs 8
+    }
+    
+    alternative 4 "Faixa de idade: Menor que 18 anos mantida" {
+        step 1 usuario "mantida faixa etária selecionada por padrão: 'Menor que 18 anos'" bs 10
+    }
+    
+    alternative 5 "Faixa de idade: Entre 18 e 29 anos" {
+        step 1 usuario "seleciona faixa etária 'Entre 18 e 29 anos'" bs 10
+    }
+    
+    alternative 6 "Faixa de idade: Entre 30 e 60 anos" {
+        step 1 usuario "seleciona faixa etária 'Entre 30 e 60 anos'" bs 10
+    }
+    
+    alternative 7 "Faixa de idade: Acima de 60 anos" {
+        step 1 usuario "seleciona faixa etária 'Acima de 60 anos'" bs 10
+    }
+    
+    exception 1 "Nome não preenchido" {
+        step 1 system "exibe mensagem de erro solicitando preenchimento do nome" bs 3
+    }
+    
+    exception 2 "E-mail inválido ou não preenchido" {
+        step 1 system "exibe mensagem de erro solicitando e-mail válido" bs 5
+    }
+    
+    exception 3 "Tipo de mensagem não selecionado" {
+        step 1 system "exibe mensagem de erro solicitando escolha pelo tipo de mensagem" bs 7
+    }
+    
+    exception 4 "Conteúdo da mensagem vazio" {
+        step 1 system "exibe mensagem de erro solicitando preenchimento do conteúdo" bs 11
+    }
+    
+    postCondition "Mensagem de contato foi enviada com sucesso para a administração"
+}

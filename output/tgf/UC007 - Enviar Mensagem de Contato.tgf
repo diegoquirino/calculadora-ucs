@@ -1,0 +1,49 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+#
+1 2 [c] O sistema está disponível e usuário deseja entrar em contato
+2 3 [s] Usuário do Sistema acessa o formulário de contato
+3 4 [e] system apresenta formulário com campos: nome, e-mail, tipo de mensagem, faixa de idade e conteúdo
+4 5 [s] Usuário do Sistema preenche o nome
+5 6 [e] system apresenta o nome informado
+6 7 [s] Usuário do Sistema preenche o e-mail
+7 8 [e] system apresenta o e-mail informado
+8 9 [s] Usuário do Sistema seleciona o tipo de mensagem
+9 10 [e] system apresenta o tipo de mensagem selecionado
+10 11 [s] Usuário do Sistema seleciona a faixa de idade
+11 12 [e] system apresenta a faixa de idade selecionada
+12 13 [s] Usuário do Sistema escreve o conteúdo da mensagem
+13 14 [e] system apresenta o conteúdo da mensagem informado
+14 15 [s] Usuário do Sistema submete o formulário
+15 16 [e] system processa e envia a mensagem
+16 17 [s] Usuário do Sistema visualiza mensagem de confirmação
+17 18 [e] system exibe mensagem 'Mensagem de <tipo de mensagem> por usuário de idade <faixa de idade> foi enviada com sucesso'
+18 19 [c] Mensagem de contato foi enviada com sucesso para a administração
+8 9 [s] Usuário do Sistema seleciona 'Dúvida' como tipo de mensagem
+8 9 [s] Usuário do Sistema seleciona 'Sugestão' como tipo de mensagem
+8 9 [s] Usuário do Sistema seleciona 'Reclamação' como tipo de mensagem
+10 11 [s] Usuário do Sistema mantida faixa etária selecionada por padrão: 'Menor que 18 anos'
+10 11 [s] Usuário do Sistema seleciona faixa etária 'Entre 18 e 29 anos'
+10 11 [s] Usuário do Sistema seleciona faixa etária 'Entre 30 e 60 anos'
+10 11 [s] Usuário do Sistema seleciona faixa etária 'Acima de 60 anos'
+15 4 [e] system exibe mensagem de erro solicitando preenchimento do nome
+15 6 [e] system exibe mensagem de erro solicitando e-mail válido
+15 8 [e] system exibe mensagem de erro solicitando escolha pelo tipo de mensagem
+15 12 [e] system exibe mensagem de erro solicitando preenchimento do conteúdo
