@@ -31,9 +31,6 @@
 31 31
 32 32
 33 33
-34 34
-35 35
-36 36
 #
 1 2 [c] O sistema está disponível e existem produtos cadastrados
 2 3 [s] Usuário do Sistema acessa a calculadora de descontos
@@ -49,9 +46,9 @@
 12 13 [s] Usuário do Sistema visualiza formulário de informações complementares
 13 14 [e] system apresenta campos: Tipo de Cliente e Quantidade
 14 15 [s] Usuário do Sistema seleciona tipo de cliente se desejar alterar
-15 16 [e] system registra o tipo de cliente selecionado
+15 16 [e] system apresenta o tipo de cliente selecionado
 16 17 [s] Usuário do Sistema informa a quantidade de produtos
-17 18 [e] system registra a quantidade informada
+17 18 [e] system apresenta a quantidade informada
 18 19 [s] Usuário do Sistema clica no botão 'Calcular Desconto!'
 19 20 [e] system processa o cálculo do desconto baseado no tipo de cliente e quantidade
 20 21 [s] Usuário do Sistema é redirecionado para página de resultado
@@ -73,7 +70,4 @@
 16 32 [s] Usuário do Sistema informa a quantidade de produtos igual ou maior que 1000 unidades
 32 33 [e] system aplica fator de desconto para quantidade >= 1000: Cliente A (1,00), B (0,95), C (0,90)
 33 19 [s] Usuário do Sistema clica no botão 'Calcular Desconto!'
-16 34 [s] Usuário do Sistema informa a quantidade de produtos menor ou igual a zero
-34 35 [e] system registra a quantidade informada
-35 36 [s] Usuário do Sistema clica no botão 'Calcular Desconto!'
-36 27 [e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)
+19 27 [e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)

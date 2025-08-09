@@ -165,21 +165,6 @@ node
   id 33
   label "33"
 ]
-node
-[
-  id 34
-  label "34"
-]
-node
-[
-  id 35
-  label "35"
-]
-node
-[
-  id 36
-  label "36"
-]
 edge
 [
   source 1
@@ -268,7 +253,7 @@ edge
 [
   source 15
   target 16
-  label "[e] system registra o tipo de cliente selecionado"
+  label "[e] system apresenta o tipo de cliente selecionado"
 ]
 edge
 [
@@ -280,7 +265,7 @@ edge
 [
   source 17
   target 18
-  label "[e] system registra a quantidade informada"
+  label "[e] system apresenta a quantidade informada"
 ]
 edge
 [
@@ -410,25 +395,7 @@ edge
 ]
 edge
 [
-  source 16
-  target 34
-  label "[s] Usuário do Sistema informa a quantidade de produtos menor ou igual a zero"
-]
-edge
-[
-  source 34
-  target 35
-  label "[e] system registra a quantidade informada"
-]
-edge
-[
-  source 35
-  target 36
-  label "[s] Usuário do Sistema clica no botão 'Calcular Desconto!'"
-]
-edge
-[
-  source 36
+  source 19
   target 27
   label "[e] system exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)"
 ]

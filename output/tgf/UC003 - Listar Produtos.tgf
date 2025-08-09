@@ -1,0 +1,22 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+#
+1 2 [c] O sistema está disponível e existem produtos cadastrados
+2 3 [s] Usuário do Sistema acessa o módulo 'Calcular Desconto'
+3 4 [e] system redireciona para a listagem de produtos
+4 5 [s] Usuário do Sistema visualiza página com título 'Lista de Produtos'
+5 6 [e] system apresenta instrução 'Selecione um produto dentre os disponíveis na listagem abaixo:'
+6 7 [s] Usuário do Sistema visualiza tabela com colunas: Código, Nome do Produto, Valor (R$) e Ações
+7 8 [e] system exibe produtos cadastrados com ações: $ (calcular), ↺ (editar), ✗ (excluir)
+8 9 [s] Usuário do Sistema visualiza botão '+ Adicionar Produto' no topo da tabela
+9 10 [e] system apresenta todos os produtos disponíveis para interação
+10 11 [c] Usuário visualiza todos os produtos cadastrados com suas respectivas ações

@@ -1,0 +1,29 @@
+systemName "Calculadora de Descontos"
+
+usecase "UC005 - Excluir Produto" {
+    version "1.0" type "Creation" user "Diego Quirino" date "08/08/2025"
+    
+    actor usuario "Usuário do Sistema"
+    
+    preCondition "O sistema está disponível e o produto a ser excluído existe na listagem"
+    
+    basic {
+        step 1 usuario "visualiza a listagem de produtos"
+        step 2 system "apresenta produtos com ícones de ação"
+        step 3 usuario "clica no ícone '✗' (excluir) do produto desejado"
+        step 4 system "apresenta mensagem pedindo a confirmação da exclusão do produto"
+        step 5 usuario "confirma a exclusão do produto" af[1]
+        step 6 system "remove o produto do banco de dados"
+        step 7 usuario "visualiza mensagem de confirmação"
+        step 8 system "exibe mensagem 'Produto {id} excluído com sucesso!'"
+        step 9 usuario "visualiza listagem atualizada sem o produto excluído"
+        step 10 system "atualiza a tabela removendo o item excluído"
+    }
+    
+    alternative 1 "Usuário desiste da exclusão do produto" {
+        step 1 usuario "não confirma a exclusão do produto"
+        step 2 system "Produto não removido"
+    }
+    
+    postCondition "Produto é removido permanentemente do sistema sem confirmação prévia"
+}

@@ -1,0 +1,40 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+#
+1 2 [c] O sistema está disponível e o usuário está na listagem de produtos
+2 3 [s] Usuário do Sistema visualiza a listagem de produtos
+3 4 [e] system apresenta tabela de produtos com botão '+ Adicionar Produto'
+4 5 [s] Usuário do Sistema clica no botão '+ Adicionar Produto'
+5 6 [e] system redireciona para formulário de cadastro
+6 7 [s] Usuário do Sistema visualiza página 'Novo Produto' com formulário
+7 8 [e] system apresenta campos: Id (preenchido automaticamente), Nome do Produto e Valor
+8 9 [s] Usuário do Sistema preenche o nome do produto
+9 10 [e] system apresenta o nome informado
+10 11 [s] Usuário do Sistema informa o valor do produto
+11 12 [e] system apresenta o valor informado
+12 13 [s] Usuário do Sistema clica no botão 'Cadastrar'
+13 14 [e] system salva o produto no banco de dados com Id sequencial
+14 15 [s] Usuário do Sistema é redirecionado para a listagem de produtos
+15 16 [e] system exibe mensagem 'Produto {id} salvo com sucesso!'
+16 17 [s] Usuário do Sistema visualiza o novo produto na listagem atualizada
+17 18 [e] system apresenta produto com Id, nome, valor e ações disponíveis
+18 19 [c] Produto é cadastrado no sistema com Id sequencial e disponível na listagem
+13 19 [e] system exibe mensagem 'O nome do produto é obrigatório!' (MSG006)
+13 19 [e] system exibe mensagem 'O valor do produto deve ser maior que zero!' (MSG007)

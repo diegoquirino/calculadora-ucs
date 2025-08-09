@@ -1,0 +1,38 @@
+systemName "Calculadora de Descontos"
+
+usecase "UC004 - Atualizar Produto" {
+    version "1.0" type "Creation" user "Diego Quirino" date "08/08/2025"
+    
+    actor usuario "Usuário do Sistema"
+    
+    preCondition "O sistema está disponível e o produto a ser editado existe na listagem"
+    
+    basic {
+        step 1 usuario "visualiza a listagem de produtos"
+        step 2 system "apresenta produtos com ícones de ação"
+        step 3 usuario "clica no ícone '↺' (editar) do produto desejado" 
+        step 4 system "redireciona para formulário de edição"
+        step 5 usuario "visualiza página 'Modificar Produto'"
+        step 6 system "apresenta formulário preenchido com dados atuais: Id, Nome e Valor"
+        step 7 usuario "modifica o nome do produto"
+        step 8 system "apresenta a nova informação"
+        step 9 usuario "modifica o valor do produto"
+        step 10 system "apresente o novo valor informado"
+        step 11 usuario "clica no botão 'Atualizar'"
+        step 12 system "atualiza o produto no banco de dados" ef[1,2]
+        step 13 usuario "é redirecionado para a listagem de produtos"
+        step 14 system "exibe mensagem 'Produto {id} salvo com sucesso!'"
+        step 15 usuario "visualiza o produto atualizado na listagem"
+        step 16 system "apresenta dados modificados na tabela"
+    }
+    
+    exception 1 "Nome do produto não preenchido" {
+        step 1 system "exibe mensagem 'O nome do produto é obrigatório!' (MSG006)" bs 7
+    }
+    
+    exception 2 "Valor inválido menor ou igual a zero" {
+        step 1 system "exibe mensagem 'O valor do produto deve ser maior que zero!' (MSG007)" bs 9
+    }
+    
+    postCondition "Produto é atualizado no sistema e as alterações são refletidas na listagem"
+}

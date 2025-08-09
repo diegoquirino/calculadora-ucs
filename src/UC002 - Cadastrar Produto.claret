@@ -1,0 +1,38 @@
+systemName "Calculadora de Descontos"
+
+usecase "UC002 - Cadastrar Produto" {
+    version "1.0" type "Creation" user "Diego Quirino" date "08/08/2025"
+    
+    actor usuario "Usuário do Sistema"
+    
+    preCondition "O sistema está disponível e o usuário está na listagem de produtos"
+    
+    basic {
+        step 1 usuario "visualiza a listagem de produtos"
+        step 2 system "apresenta tabela de produtos com botão '+ Adicionar Produto'"
+        step 3 usuario "clica no botão '+ Adicionar Produto'"
+        step 4 system "redireciona para formulário de cadastro"
+        step 5 usuario "visualiza página 'Novo Produto' com formulário"
+        step 6 system "apresenta campos: Id (preenchido automaticamente), Nome do Produto e Valor"
+        step 7 usuario "preenche o nome do produto"
+        step 8 system "apresenta o nome informado"
+        step 9 usuario "informa o valor do produto"
+        step 10 system "apresenta o valor informado"
+        step 11 usuario "clica no botão 'Cadastrar'"
+        step 12 system "salva o produto no banco de dados com Id sequencial" ef[1,2]
+        step 13 usuario "é redirecionado para a listagem de produtos"
+        step 14 system "exibe mensagem 'Produto {id} salvo com sucesso!'"
+        step 15 usuario "visualiza o novo produto na listagem atualizada"
+        step 16 system "apresenta produto com Id, nome, valor e ações disponíveis"
+    }
+    
+    exception 1 "Nome do produto não preenchido" {
+        step 1 system "exibe mensagem 'O nome do produto é obrigatório!' (MSG006)"
+    }
+    
+    exception 2 "Valor inválido menor ou igual a zero" {
+        step 1 system "exibe mensagem 'O valor do produto deve ser maior que zero!' (MSG007)"
+    }
+    
+    postCondition "Produto é cadastrado no sistema com Id sequencial e disponível na listagem"
+}

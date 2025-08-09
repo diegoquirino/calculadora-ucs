@@ -21,11 +21,11 @@ usecase "UC001 - Calcular Desconto de Produto" {
         step 11 usuario "visualiza formulário de informações complementares"
         step 12 system "apresenta campos: Tipo de Cliente e Quantidade"
         step 13 usuario "seleciona tipo de cliente se desejar alterar" af[1,2,3]
-        step 14 system "registra o tipo de cliente selecionado"
-        step 15 usuario "informa a quantidade de produtos" af[4,5,6,7]
-        step 16 system "registra a quantidade informada"
+        step 14 system "apresenta o tipo de cliente selecionado"
+        step 15 usuario "informa a quantidade de produtos" af[4,5,6]
+        step 16 system "apresenta a quantidade informada"
         step 17 usuario "clica no botão 'Calcular Desconto!'"
-        step 18 system "processa o cálculo do desconto baseado no tipo de cliente e quantidade"
+        step 18 system "processa o cálculo do desconto baseado no tipo de cliente e quantidade" ef[1]
         step 19 usuario "é redirecionado para página de resultado"
         step 20 system "exibe mensagem 'Valor do desconto calculado com sucesso!'"
         step 21 usuario "visualiza resultado do cálculo com todos os detalhes"
@@ -64,10 +64,7 @@ usecase "UC001 - Calcular Desconto de Produto" {
         step 3 usuario "clica no botão 'Calcular Desconto!'" bs 18
     }
     
-    alternative 7 "Quantidade menor ou igual a zero" {
-        step 1 usuario "informa a quantidade de produtos menor ou igual a zero"
-        step 2 system "registra a quantidade informada"
-        step 3 usuario "clica no botão 'Calcular Desconto!'"
+    exception 1 "Quantidade menor ou igual a zero" {
         step 4 system "exibe mensagem 'A quantidade informada deve ser maior ou igual a 01 (um)!' (MSG002)"
     }
     

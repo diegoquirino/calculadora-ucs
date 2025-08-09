@@ -1,0 +1,57 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+20 20
+21 21
+22 22
+23 23
+24 24
+25 25
+26 26
+27 27
+28 28
+#
+1 15 conditions
+15 2 O sistema está disponível e o produto a ser excluído existe na listagem
+2 16 steps
+16 3 Usuário do Sistema visualiza a listagem de produtos
+3 17 expected_results
+17 4 system apresenta produtos com ícones de ação
+4 18 steps
+18 5 Usuário do Sistema clica no ícone '✗' (excluir) do produto desejado
+5 19 expected_results
+19 6 system apresenta mensagem pedindo a confirmação da exclusão do produto
+6 20 steps
+20 7 Usuário do Sistema confirma a exclusão do produto
+7 21 expected_results
+21 8 system remove o produto do banco de dados
+8 22 steps
+22 9 Usuário do Sistema visualiza mensagem de confirmação
+9 23 expected_results
+23 10 system exibe mensagem 'Produto {id} excluído com sucesso!'
+10 24 steps
+24 11 Usuário do Sistema visualiza listagem atualizada sem o produto excluído
+11 25 expected_results
+25 12 system atualiza a tabela removendo o item excluído
+12 26 conditions
+26 13 Produto é removido permanentemente do sistema sem confirmação prévia
+6 27 steps
+27 14 Usuário do Sistema não confirma a exclusão do produto
+14 28 expected_results
+28 13 system Produto não removido

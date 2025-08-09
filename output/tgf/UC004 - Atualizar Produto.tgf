@@ -1,0 +1,40 @@
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 13
+14 14
+15 15
+16 16
+17 17
+18 18
+19 19
+#
+1 2 [c] O sistema está disponível e o produto a ser editado existe na listagem
+2 3 [s] Usuário do Sistema visualiza a listagem de produtos
+3 4 [e] system apresenta produtos com ícones de ação
+4 5 [s] Usuário do Sistema clica no ícone '↺' (editar) do produto desejado
+5 6 [e] system redireciona para formulário de edição
+6 7 [s] Usuário do Sistema visualiza página 'Modificar Produto'
+7 8 [e] system apresenta formulário preenchido com dados atuais: Id, Nome e Valor
+8 9 [s] Usuário do Sistema modifica o nome do produto
+9 10 [e] system apresenta a nova informação
+10 11 [s] Usuário do Sistema modifica o valor do produto
+11 12 [e] system apresente o novo valor informado
+12 13 [s] Usuário do Sistema clica no botão 'Atualizar'
+13 14 [e] system atualiza o produto no banco de dados
+14 15 [s] Usuário do Sistema é redirecionado para a listagem de produtos
+15 16 [e] system exibe mensagem 'Produto {id} salvo com sucesso!'
+16 17 [s] Usuário do Sistema visualiza o produto atualizado na listagem
+17 18 [e] system apresenta dados modificados na tabela
+18 19 [c] Produto é atualizado no sistema e as alterações são refletidas na listagem
+13 8 [e] system exibe mensagem 'O nome do produto é obrigatório!' (MSG006)
+13 10 [e] system exibe mensagem 'O valor do produto deve ser maior que zero!' (MSG007)
